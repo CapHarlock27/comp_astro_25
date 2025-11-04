@@ -37,12 +37,16 @@ daneel -i <input_file> [options]
 ### Command-line options
 
 - `-i, --input`: Input parameter file (required)
+- `-t, -- transit`: Plots the exoplanet light curve
 - `-d, --detect`: Initialize detection algorithms for exoplanets
 - `-a, --atmosphere`: Atmospheric characterization from input transmission spectrum
 
 ### Examples
 
 ```bash
+# Run plotting of exoplanet light curve
+daneel -i parameters.yaml -t
+
 # Run exoplanet detection
 daneel -i parameters.yaml -d
 
