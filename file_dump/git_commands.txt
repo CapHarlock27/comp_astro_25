@@ -1,0 +1,32 @@
+git init REPO_NAME 		create a blank git repository
+git clone REPO_URL		create a repository from URL
+
+git status			check status: commit/push
+git log				check log
+
+git add	F_NAME			add file to the stage
+git add -all			add all files to the stage
+git commit -m "MESSAGE"		commit staged files
+git push			push commits to remote repository
+
+git remote -v			show current remotes
+git remote add NAME REM_URL	add remote
+git remote show REM_NAME	check remote info
+git fetch REM_NAME		fetch latest version of remote
+git log REM_NAME/BRANCH 	log of remote
+
+git branch -a			list of branches
+git branch BRANCH_NAME		create new branch
+git checkout BRANCH_NAME	move to branch
+git checkout -b BRANCH_NAME	create and move to new branch
+
+git merge BRANCH_NAME		merge branch -> you need to move to the "main"
+git cherry-pick COMMIT_CODE	merge single commit to branch
+
+to update the "main"
+git fetch ORIGIN
+git merge ORIGIN/MAIN		or ORIGIN/MASTER (older versions of git)
+
+
+
+ctrl + shift + v 		markdown in vscode
