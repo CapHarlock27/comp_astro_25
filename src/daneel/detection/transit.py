@@ -15,7 +15,7 @@ class TransitModel:
         self.params.inc = input_params.get("inc")                               # orbital inclination (in degrees)
         self.params.ecc = input_params.get("ecc")                               # eccentricity
         self.params.w = input_params.get("w")                                   # longitude of periastron (in degrees)
-        self.params.u = input_params.get("u")                            # limb darkening coefficients [u1, u2]
+        self.params.u = input_params.get("u")                                   # limb darkening coefficients [u1, u2]
         self.params.limb_dark = input_params.get("limb_darkening_model")        # limb darkening model
 
         # self.name = "K2-18_b"                       # Name of the exoplanet

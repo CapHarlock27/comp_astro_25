@@ -59,7 +59,23 @@ daneel -i parameters.yaml -d -a
 
 ## Input File Format
 
-The input file should be a YAML file containing the necessary parameters for the analysis.
+The input file should be a YAML file containing the necessary parameters for the analysis.\
+In this dictionary, consider following the *batman* library parameters format while also adding a key with the name of the selected exoplanet.
+
+### Example
+
+```bash
+name: "K2-18_b"                       # name of the exoplanet
+t0: 0                                 # time of inferior conjunction
+per: 32.939623                        # orbital period
+rp: 0.0212                            # planet radius (in units of stellar radii)
+a: 30.73                              # semi-major axis (in units of stellar radii)
+inc: 89.5785                          # orbital inclination (in degrees)
+ecc: 0.2                              # eccentricity
+w: 354.3                              # longitude of periastron (in degrees)
+u: [0.391617, 0.019183]               # limb darkening coefficients [u1, u2]
+limb_darkening_model: "quadratic"     # limb darkening model
+```
 
 ## License
 
