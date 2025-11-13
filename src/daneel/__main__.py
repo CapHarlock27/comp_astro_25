@@ -41,6 +41,15 @@ def main():
     )
 
     parser.add_argument(
+        "-t",
+        "--transit",
+        dest="transit",
+        required=False,
+        help="Plots transit lightcurve from yaml file",
+        action="store_true",
+    )
+
+    parser.add_argument(
         "-d",
         "--detect",
         dest="detect",
