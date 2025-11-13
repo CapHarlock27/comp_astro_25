@@ -32,6 +32,15 @@ def main():
     )
 
     parser.add_argument(
+        "-t",
+        "--transit",
+        dest="transit",
+        required=False,
+        help="Plots transit lightcurve from yaml file",
+        action="store_true",
+    )
+
+    parser.add_argument(
         "-d",
         "--detect",
         dest="detect",
@@ -68,15 +77,6 @@ def main():
 
     input_params = Parameters(args.input_file).params
 
-<<<<<<< HEAD
-    # if args.detect:
-    #     pass
-    # if args.atmosphere:
-    #     pass
-    if args.transit:
-        new_obj = TransitModel(input_params)
-        new_obj.plot()
-=======
     if args.transit:
         transit = TransitModel(input_pars['transit'])
         transit.plot_light_curve()
