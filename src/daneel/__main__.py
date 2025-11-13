@@ -19,11 +19,28 @@ def main():
     parser.add_argument(
         "-t",
         "--transit",
+<<<<<<< HEAD
         dest = "transit",
         required = False,        
         help = "Plot the light curve of the selected exoplanet",
         action = "store_true",
+=======
+        dest="transit",
+        required=False,
+        help="Plots transit lightcurve from yaml file",
+        action="store_true",
     )
+
+    parser.add_argument(
+        "-d",
+        "--detect",
+        dest="detect",
+        required=False,
+        help="Initialise detection algorithms for Exoplanets",
+        action="store_true",
+>>>>>>> 4ef3ba2 (added solution for transit class and initial structure for artificial intelligence tasks)
+    )
+    
 
     # parser.add_argument(
     #     "-d",
@@ -51,6 +68,7 @@ def main():
 
     input_params = Parameters(args.input_file).params
 
+<<<<<<< HEAD
     # if args.detect:
     #     pass
     # if args.atmosphere:
@@ -58,6 +76,15 @@ def main():
     if args.transit:
         new_obj = TransitModel(input_params)
         new_obj.plot()
+=======
+    if args.transit:
+        transit = TransitModel(input_pars['transit'])
+        transit.plot_light_curve()
+    elif args.detect:
+        pass
+    elif args.atmosphere:
+        pass
+>>>>>>> 4ef3ba2 (added solution for transit class and initial structure for artificial intelligence tasks)
 
     finish = datetime.datetime.now()
     print(f"Daneel finishes at {finish}")
