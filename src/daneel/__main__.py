@@ -45,15 +45,15 @@ def main():
     # )
 
     args = parser.parse_args()
-
+    
     """Launch Daneel"""
     start = datetime.datetime.now()
     print(f"Daneel starts at {start}")
 
     input_params = Parameters(args.input_file).params
-
+    
     if args.transit:
-        transit = TransitModel(input_pars['transit'])
+        transit = TransitModel(input_params['transit'])
         transit.plot_light_curve()
     elif args.detect:
         pass
